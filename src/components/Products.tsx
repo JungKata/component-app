@@ -1,14 +1,12 @@
 import { Component, ReactNode } from "react";
-import  {Product as ProductIterface } from "../Product";
+import  {Product as ProductInterface } from "../Product";
 
 interface Props{
-    product: Product;
+    product: ProductInterface;
 }
 
 export default class Product extends Component<Props>{
     render(): ReactNode {
-        return <div>
-            <p>Product details</p>
-        </div>
+        return <p>{this.props.product.name}</p>
     }
 }

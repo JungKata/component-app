@@ -3,10 +3,10 @@ import logo from './logo.svg';
 import './App.css';
 import Main from './components/Main';
 import Footer from './components/Footer';
-import { Product } from './Product';
+import { Product as ProductInterface } from './Product';
 
 interface State{
-  products: Product[];
+  products: ProductInterface[];
 }
 
 export default class App extends Component<{}, State> {
@@ -30,6 +30,7 @@ export default class App extends Component<{}, State> {
         {
           this.state.products.map(p => <div>Ide jön valami </div>)
         }
+        <Footer />
       </div>
   }
 }
