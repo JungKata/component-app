@@ -4,6 +4,7 @@ import './App.css';
 import Main from './components/Main';
 import Footer from './components/Footer';
 import { Product as ProductInterface } from './Product';
+import Product from './components/Products';
 
 interface State{
   products: ProductInterface[];
@@ -28,7 +29,7 @@ export default class App extends Component<{}, State> {
   render(): React.ReactNode {
       return <div>
         {
-          this.state.products.map(p => <div>Ide jön valami </div>)
+          this.state.products.map(p => <Product product={p} /> )
         }
         <Footer />
       </div>
