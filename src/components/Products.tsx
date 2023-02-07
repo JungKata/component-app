@@ -10,6 +10,7 @@ export default class Product extends Component<Props>{
         return <tr style= { {color: this.props.product.stocked ? 'black' : 'red'}}>
             <td>{this.props.product.name}</td>
             <td>{this.props.product.price}</td>
+            
         </tr>
     }
 }

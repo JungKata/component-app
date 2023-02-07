@@ -5,12 +5,13 @@ import Main from './components/Main';
 import Footer from './components/Footer';
 import { Product as ProductInterface } from './Product';
 import Product from './components/Products';
+import ErrorMessage from './components/ErrorMessage';
 
 interface State{
   products: ProductInterface[];
 }
 
-export default class App extends Component<{}, State> {
+export default class App extends Component<{}, State>,ErrorMessage {
   constructor(props: {}){
     super(props);
   this.state = {
@@ -38,10 +39,14 @@ export default class App extends Component<{}, State> {
           <tbody>
             {
               this.state.products.map(p => <Product product={p} /> )
-            }
+            
+            } 
           </tbody>
         </table>
         <Footer />
+        {
+          this.e.error.message.map()
+        }
       </div>
   }
 }
