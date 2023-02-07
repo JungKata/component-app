@@ -11,7 +11,7 @@ interface State{
   products: ProductInterface[];
 }
 
-export default class App extends Component<{}, State>,ErrorMessage {
+export default class App extends Component<{}, State> {
   constructor(props: {}){
     super(props);
   this.state = {
@@ -44,9 +44,8 @@ export default class App extends Component<{}, State>,ErrorMessage {
           </tbody>
         </table>
         <Footer />
-        {
-          this.e.error.message.map()
-        }
+       <ErrorMessage message='Kevés a termék'/>
+       <ErrorMessage message=''/>
       </div>
   }
 }

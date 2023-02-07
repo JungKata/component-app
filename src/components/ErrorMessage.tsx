@@ -1,14 +1,24 @@
 import { Component, ReactNode } from "react";
 import  {Product as ProductInterface } from "../Product";
 
-interface Error{
-    error: string;
+interface Props{
+    message: string;
 }
 
-export default class ErrorMessage extends Component<Error>{
+export default class ErrorMessage extends Component<Props>{
     render(): ReactNode {
-        return <div style= { {color: this.props.error ? 'green' : 'red'}}>
-            {"Error message"}
-    </div>
+       let tartalom = 'Minden OK';
+       let stilus = {
+        color: 'green',
+        backgroundColor: 'lightblue'
+       };
+       if(this.props.message != ''){
+        tartalom = this.props.message;
+        stilus = {
+            color: 'red',
+            backgroundColor: 'ffd1d1'
+        }
+    }
+    return <p style={stilus}>{tartalom}</p>
     }
 }
