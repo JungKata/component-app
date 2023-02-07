@@ -6,6 +6,9 @@ import Footer from './components/Footer';
 import { Product as ProductInterface } from './Product';
 import Product from './components/Products';
 import ErrorMessage from './components/ErrorMessage';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Button, Navbar, Container, Nav,Card as BsCard } from 'react-bootstrap';
+
 
 interface State{
   products: ProductInterface[];
@@ -29,6 +32,13 @@ export default class App extends Component<{}, State> {
     
   render(): React.ReactNode {
       return <div>
+        <Navbar>
+          <Container>
+            <Nav.Link href="https://example.com">Oldalra mutató link</Nav.Link>
+            <Nav.Link href="https://example.com">Oldalra mutató link</Nav.Link>
+            <Nav.Link href="https://example.com">Oldalra mutató link</Nav.Link>
+          </Container>
+        </Navbar>
         <table>
           <thead>
             <tr>
@@ -46,6 +56,13 @@ export default class App extends Component<{}, State> {
         <Footer />
        <ErrorMessage message='Kevés a termék'/>
        <ErrorMessage message=''/>
+       <div>
+       <BsCard.Body>
+          <BsCard.Title>A kártya címe:</BsCard.Title>
+          <BsCard.Text>Leírás</BsCard.Text>
+        </BsCard.Body>
+        <Button variant='danger'>Katt ide</Button>
+       </div>
       </div>
   }
 }

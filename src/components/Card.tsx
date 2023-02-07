@@ -8,6 +8,7 @@ interface Cards{
 }
 
 export default class Card extends Component<Cards>{
+
     render(): ReactNode {
         return <div>
            
