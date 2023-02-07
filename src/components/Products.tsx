@@ -7,6 +7,9 @@ interface Props{
 
 export default class Product extends Component<Props>{
     render(): ReactNode {
-        return <p>{this.props.product.name}</p>
+        return <tr style= { {color: this.props.product.stocked ? 'black' : 'red'}}>
+            <td>{this.props.product.name}</td>
+            <td>{this.props.product.price}</td>
+        </tr>
     }
 }
